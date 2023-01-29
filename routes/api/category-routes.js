@@ -64,34 +64,6 @@ router.put('/:id', (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// Delete route for a book with a matching isbn
-router.delete('/:isbn', (req, res) => {
-  // Looks for the books based on isbn given in the request parameters and deletes the instance from the database
-  Book.destroy({
-    where: {
-      isbn: req.params.isbn,
-    },
-  })
-    .then((deletedBook) => {
-      res.json(deletedBook);
-    })
-    .catch((err) => res.json(err));
-});
-
-// Delete route for a book with a matching isbn
-router.delete('/:isbn', (req, res) => {
-  // Looks for the books based on isbn given in the request parameters and deletes the instance from the database
-  Book.destroy({
-    where: {
-      isbn: req.params.isbn,
-    },
-  })
-    .then((deletedBook) => {
-      res.json(deletedBook);
-    })
-    .catch((err) => res.json(err));
-});
-
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try{
