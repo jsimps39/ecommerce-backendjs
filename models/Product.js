@@ -16,13 +16,14 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
   },
-  location_name: {
+  product_name: {
       type: DataTypes.STRING,
       allowNull: false,
   },
   price: {
     type: DataTypes.FLOAT,
     allowNull: false,
+    IS_DECIMAL: true
     //NEED TO VALIDATE THAT THE VALUE IS A DECIMAL
 },
 stock: {
